@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<woss>
+	<gather class="com.briup.woss.client.GatherImpl">
+		<nas-ip>127.0.0.1</nas-ip>
+		<src-file>file/temp.txt</src-file>
+	</gather>
+	
+	<client class="com.briup.woss.client.ClientImpl">
+		<client-ip>127.0.0.1</client-ip>
+		<client-port>9000</client-port>
+	</client>
+	
+	<server class="com.briup.woss.server.ServerImpl">
+		<server-port>9000</server-port>
+	</server>
+	
+	<dbstore class="com.briup.woss.server.DBStoreImpl">
+			<driver>oracle.jdbc.driver.OracleDriver</driver>
+			<url>jdbc:oracle:thin:@localhost:1521:XE</url>
+			<userName>jd1713</userName>
+			<passWord>jd1713</passWord>
+			<batch-size>500</batch-size>
+	</dbstore>
+	
+	<logger class="com.briup.util.LogerImpl">
+		<log-properties>src/log4j.properties</log-properties>
+	</logger>
+	
+	<backup class="com.briup.util.BackUpImpl">
+		<back-temp>file/log-properties</back-temp>
+	</backup>
+</woss>
